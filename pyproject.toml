@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "am-i-even-or-odd"
-version = "0.1.0"
+version = "0.2.0"
 description = "A tiny Python library for checking whether numbers are even or odd."
 readme = "README.md"
 requires-python = ">=3.8"
@@ -24,10 +24,37 @@ keywords = [
 ]
 
 classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
     "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent"
+    "Operating System :: OS Independent",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/KenKambi/am-i-even-or-odd"
+Repository = "https://github.com/KenKambi/am-i-even-or-odd"
+"Bug Tracker" = "https://github.com/KenKambi/am-i-even-or-odd/issues"
+Changelog = "https://github.com/KenKambi/am-i-even-or-odd/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
 ]
 
 [tool.setuptools.packages.find]
 where = ["."]
+exclude = ["tests", "tests.*"]
+
+[tool.setuptools.package-data]
+am_i_even_or_odd = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
