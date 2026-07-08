@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "am-i-even-or-odd"
+version = "0.1.0"
+description = "A tiny Python library for checking whether numbers are even or odd."
+readme = "README.md"
+requires-python = ">=3.8"
+
+authors = [
+  { name = "Ken Kambi" }
+]
+
+license = { text = "MIT" }
+
+keywords = [
+    "even",
+    "odd",
+    "math",
+    "parity",
+    "python"
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
