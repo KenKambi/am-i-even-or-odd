@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "am-i-even-or-odd"
-version = "0.2.0"
-description = "A tiny Python library for checking whether numbers are even or odd."
+version = "0.3.0"
+description = "Is your number even or odd tho?"
 readme = "README.md"
 requires-python = ">=3.8"
 
@@ -43,6 +43,9 @@ Homepage = "https://github.com/KenKambi/am-i-even-or-odd"
 Repository = "https://github.com/KenKambi/am-i-even-or-odd"
 "Bug Tracker" = "https://github.com/KenKambi/am-i-even-or-odd/issues"
 Changelog = "https://github.com/KenKambi/am-i-even-or-odd/blob/main/CHANGELOG.md"
+
+[project.scripts]
+am-i-even-or-odd = "am_i_even_or_odd.cli:main"
 
 [project.optional-dependencies]
 dev = [

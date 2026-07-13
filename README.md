@@ -1,14 +1,13 @@
-# Am I Even Or Odd 
+# Am I Even Or Odd
 
 [![PyPI version](https://img.shields.io/pypi/v/am-i-even-or-odd.svg)](https://pypi.org/project/am-i-even-or-odd/)
 [![CI](https://github.com/KenKambi/am-i-even-or-odd/actions/workflows/ci.yml/badge.svg)](https://github.com/KenKambi/am-i-even-or-odd/actions/workflows/ci.yml)
 [![Python versions](https://img.shields.io/pypi/pyversions/am-i-even-or-odd.svg)](https://pypi.org/project/am-i-even-or-odd/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/KenKambi/am-i-even-or-odd/blob/main/LICENSE)
 
-A tiny Python package that answers one simple question:
-is your number even, or odd tho?
+Is your number even or odd tho?
 
-Yes, `n % 2 == 0` does the same thing :)
+Yes, `n % 2 == 0` does the same thing.
 
 ## Installation
 
@@ -44,6 +43,23 @@ TypeError: expected an int, got 'float' (4.0). Floats and other
 numeric types aren't supported to avoid ambiguity around what
 counts as 'even' or 'odd'.
 ```
+
+## Command line
+
+Installing the package also gives you a CLI:
+
+```bash
+$ am-i-even-or-odd 42
+even
+
+$ am-i-even-or-odd 7 --fun
+7 is even! Kidding it's obviously ODD.
+```
+
+`--fun` swaps the plain `even`/`odd` output for a random one-liner
+with a bit more personality. Invalid input (non-integers) prints a
+usage error and exits with a non-zero status code, so it plays nice
+in scripts.
 
 ## Development
 
