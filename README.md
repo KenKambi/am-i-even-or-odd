@@ -2,6 +2,7 @@
 
 [![PyPI version](https://img.shields.io/pypi/v/am-i-even-or-odd.svg)](https://pypi.org/project/am-i-even-or-odd/)
 [![CI](https://github.com/KenKambi/am-i-even-or-odd/actions/workflows/ci.yml/badge.svg)](https://github.com/KenKambi/am-i-even-or-odd/actions/workflows/ci.yml)
+[![Downloads](https://img.shields.io/pepy/dt/am-i-even-or-odd)](https://pepy.tech/projects/am-i-even-or-odd)
 [![Python versions](https://img.shields.io/pypi/pyversions/am-i-even-or-odd.svg)](https://pypi.org/project/am-i-even-or-odd/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/KenKambi/am-i-even-or-odd/blob/main/LICENSE)
 
@@ -31,20 +32,7 @@ True
 True
 ```
 
-### Error handling
-
-Only `int` values are accepted. Anything else — floats, strings,
-`None`, booleans — raises a `TypeError` with a message explaining
-why, rather than silently returning a possibly-wrong answer:
-
-```python
->>> is_it_even_tho(4.0)
-TypeError: expected an int, got 'float' (4.0). Floats and other
-numeric types aren't supported to avoid ambiguity around what
-counts as 'even' or 'odd'.
-```
-
-## Command line
+### Command line
 
 Installing the package also gives you a CLI:
 
@@ -61,7 +49,20 @@ with a bit more personality. Invalid input (non-integers) prints a
 usage error and exits with a non-zero status code, so it plays nice
 in scripts.
 
-## Development
+### Error handling
+
+Only `int` values are accepted. Anything else — floats, strings,
+`None`, booleans — raises a `TypeError` with a message explaining
+why, rather than silently returning a possibly-wrong answer:
+
+```python
+>>> is_it_even_tho(4.0)
+TypeError: expected an int, got 'float' (4.0). Floats and other
+numeric types aren't supported to avoid ambiguity around what
+counts as 'even' or 'odd'.
+```
+
+### Development
 
 ```bash
 git clone https://github.com/KenKambi/am-i-even-or-odd.git
